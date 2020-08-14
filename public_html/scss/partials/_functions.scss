@@ -4,17 +4,34 @@
 
 
 @mixin radius($radius){
-    border-radius: $radius;
-    -moz-border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -o-border-radius: $radius;
+
+    @if($enable-radius){
+        border-radius: $radius;
+        -moz-border-radius: $radius;
+        -webkit-border-radius: $radius;
+        -o-border-radius: $radius;
+    }@else{
+        border-radius: 0px;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -o-border-radius: 0px;
+    } 
+
 }
 
 @mixin customRadius($rtl, $tr, $rbr, $rbl){
-    border-radius:$rtl $tr $rbr $rbl; 
-    -moz-border-radius:$rtl $tr $rbr $rbl; 
-    -webkit-border-radius:$rtl $tr $rbr $rbl; 
-    -o-border-radius:$rtl $tr $rbr $rbl; 
+    @if($enable-radius){
+        border-radius:$rtl $tr $rbr $rbl; 
+        -moz-border-radius:$rtl $tr $rbr $rbl; 
+        -webkit-border-radius:$rtl $tr $rbr $rbl; 
+        -o-border-radius:$rtl $tr $rbr $rbl; 
+    }@else{
+        border-radius: 0px;
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        -o-border-radius: 0px; 
+    }
+
 }
 
 
