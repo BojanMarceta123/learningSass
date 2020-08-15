@@ -29,7 +29,8 @@ $tbody-hover-bg: darken($light-gray, 15%);
         thead{
            background: $table-head-border;
            th{
-               color: $thead-color;
+              // color: $thead-color;zamenicemo sa 
+              color: colorYiq($table-head-border);
                border: $thead-border-color;
            }
         }//thead end
